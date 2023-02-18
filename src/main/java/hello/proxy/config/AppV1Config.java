@@ -14,7 +14,7 @@ public class AppV1Config {
 
     @Bean
     public OrderServiceV1 orderServiceV1() {
-        return new OrderServiceImplV1Impl(orderRepositoryV1());
+        return new OrderServiceImplV1(orderRepositoryV1());
     }
 
     @Bean
