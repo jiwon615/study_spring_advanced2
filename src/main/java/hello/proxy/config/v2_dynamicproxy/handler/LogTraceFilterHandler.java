@@ -35,7 +35,7 @@ public class LogTraceFilterHandler implements InvocationHandler {
             status = logTrace.begin(message);
 
             // 로직 호출
-            Object result = method.invoke(target, args);
+            Object result = method.invoke(target, args); // target 인스턴스의 메소드를 실행. args는 메소드 호출 시 넘겨줄 인수
 
             logTrace.end(status);
             return result;

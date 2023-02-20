@@ -11,6 +11,7 @@ import java.lang.reflect.Proxy;
 @Configuration
 public class DynamicProxyFilterConfig {
 
+    // 적용할 패턴이다. request , order , save 로 시작하는 메서드에 로그가 남는다.
     private static final String[] PATTERNS = {"request*", "order*", "save*"};
 
     @Bean

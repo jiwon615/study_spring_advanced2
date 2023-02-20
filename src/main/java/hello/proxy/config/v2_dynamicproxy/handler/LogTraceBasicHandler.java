@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 /**
  * 해당 클래스는 JDK 동적 프록시에 적용할 로직으로, InvocationHandler 인터페이스를 구현한다.
- * - vi/no-log인 경우에도 LogTraceBasicHandler를 타게 된다
+ * - v1/no-log인 경우에도 LogTraceBasicHandler를 타게 된다
  */
 public class LogTraceBasicHandler implements InvocationHandler {
 
