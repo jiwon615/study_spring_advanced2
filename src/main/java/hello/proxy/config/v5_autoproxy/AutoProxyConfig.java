@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * 스프링이 제공하는 빈후처리기를 사용하면,
- * 현재 클래스에서 어드바이저 하나만 등록하여
+ *
  * 스프링은 자동 프록시 생성기라는  AnnotationAwareAspectJAutoProxyCreator ) 빈 후처리기를 자동으로 등록해줌
+ * 따라서 개발자는 어드바이저만 등록하면 됨
  */
 @Configuration
 @Import({AppV1Config.class, AppV2Config.class})
