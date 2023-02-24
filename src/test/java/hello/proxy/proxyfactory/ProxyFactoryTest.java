@@ -37,7 +37,7 @@ public class ProxyFactoryTest {
     void concreteProxy() {
         ConcreteService target = new ConcreteService();
         ProxyFactory proxyFactory = new ProxyFactory(target); // target이 구체 클래스라서 CGLIB 사용
-        proxyFactory.addAdvice(new TimeAdvice());
+        proxyFactory.addAdvice(new TimeAdvice());  // 내부적으로 DefaultPointcutAdvisor(Pointcut.TRUE, new TimeAdvice()) 코드 실행함
         ConcreteService proxy = (ConcreteService) proxyFactory.getProxy(); // 프록시 객체를 생성하고 그 결과를 받음
         log.info("targetClass={}", target.getClass());
         log.info("proxyClass={}", proxy.getClass());
